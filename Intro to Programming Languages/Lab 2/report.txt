@@ -1,0 +1,94 @@
+Score: 76
+
+term grouping and order incorrect in addpoly
+
+addpoly:
+  addpoly [(1,1)] []
+  addpoly [(1,1)] [(1,1)]
+  addpoly [] []
+  addpoly [(2,2), [(1,1)] [(1,1)] FAILED [1]
+  addpoly [(2,2), (1,1)] [(2,2)]
+  addpoly [(5,5), (4,4), (3,3)] [(2,2), (1,1), (1,0)] FAILED [2]
+  addpoly [(5,5), (4,4), (3,0)] [(6,6), (-5,5), (-4,0)] FAILED [3]
+  addpoly [(-5,5), (-4,4), (-3,0)] [(5,5), (4,4), (3,0)] FAILED [4]
+
+Failures:
+
+  ../la2a_test.hs:21: 
+  1) addpoly: addpoly [(2,2), [(1,1)] [(1,1)]
+       expected: [(2,2),(2,1)]
+        but got: [(1,1),(2,2),(1,1)]
+
+  ../la2a_test.hs:27: 
+  2) addpoly: addpoly [(5,5), (4,4), (3,3)] [(2,2), (1,1), (1,0)]
+       expected: [(5,5),(4,4),(3,3),(2,2),(1,1),(1,0)]
+        but got: [(2,2),(5,5),(1,1),(4,4),(1,0),(3,3)]
+
+  ../la2a_test.hs:30: 
+  3) addpoly: addpoly [(5,5), (4,4), (3,0)] [(6,6), (-5,5), (-4,0)]
+       expected: [(6,6),(4,4),(-1,0)]
+        but got: [(5,5),(6,6),(4,4),(-5,5),(-1,0)]
+
+  ../la2a_test.hs:33: 
+  4) addpoly: addpoly [(-5,5), (-4,4), (-3,0)] [(5,5), (4,4), (3,0)]
+       expected: []
+        but got: [(0,5),(0,4),(0,0)]
+
+Randomized with seed 372750251
+
+Finished in 0.0063 seconds
+8 examples, 4 failures
+
+multpoly:
+  multpoly [(1,1)] []
+  multpoly [(1,1)] [(1,1)]
+  multpoly [] []
+  multpoly [(2,2), [(1,1)] [(1,1)] FAILED [1]
+  multpoly [(2,2), (1,1)] [(2,2)] FAILED [2]
+  multpoly [(5,5), (4,4), (3,3)] [(2,2), (1,1), (1,0)] FAILED [3]
+  multpoly [(5,5), (4,4), (3,0)] [(6,6), (-5,5), (-4,0)] FAILED [4]
+  multpoly [(-5,5), (-4,4), (-3,0)] [(5,5), (4,4), (3,0)] FAILED [5]
+
+Failures:
+
+  ../la2b_test.hs:21: 
+  1) multpoly: multpoly [(2,2), [(1,1)] [(1,1)]
+       expected: [(2,3),(1,2)]
+        but got: [(1,2),(2,3)]
+
+  ../la2b_test.hs:24: 
+  2) multpoly: multpoly [(2,2), (1,1)] [(2,2)]
+       expected: [(4,4),(2,3)]
+        but got: [(2,3),(4,4)]
+
+  ../la2b_test.hs:27: 
+  3) multpoly: multpoly [(5,5), (4,4), (3,3)] [(2,2), (1,1), (1,0)]
+       expected: [(10,7),(13,6),(15,5),(7,4),(3,3)]
+        but got: [(6,5),(10,7),(13,6),(3,4),(5,5),(4,5),(3,3),(4,4)]
+
+  ../la2b_test.hs:30: 
+  4) multpoly: multpoly [(5,5), (4,4), (3,0)] [(6,6), (-5,5), (-4,0)]
+       expected: [(30,11),(-1,10),(-20,9),(18,6),(-35,5),(-16,4),(-12,0)]
+        but got: [(18,6),(30,11),(-1,10),(-35,5),(-20,9),(-12,0),(-16,4)]
+
+  ../la2b_test.hs:33: 
+  5) multpoly: multpoly [(-5,5), (-4,4), (-3,0)] [(5,5), (4,4), (3,0)]
+       expected: [(-25,10),(-40,9),(-16,8),(-30,5),(-24,4),(-9,0)]
+        but got: [(-15,5),(-25,10),(-40,9),(-12,4),(-15,5),(-16,8),(-9,0),(-12,4)]
+
+Randomized with seed 1359363337
+
+Finished in 0.0099 seconds
+8 examples, 5 failures
+
+
+-----------WARNING AND ERROR OUTPUTS BELOW-----------
+
+
+PolyLA2.hs:18:1: warning: [-Wtabs]
+    Tab character found here, and in two further locations.
+    Please use spaces instead.
+
+PolyLA2.hs:18:1: warning: [-Wtabs]
+    Tab character found here, and in two further locations.
+    Please use spaces instead.

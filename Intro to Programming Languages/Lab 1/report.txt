@@ -1,0 +1,161 @@
+Score: 74
+
+There's no reason to restrict lists to numbers in the first three functions.
+sin' has some trouble with approximations
+
+sin':
+  sin' 0 1
+  sin' (pi/6) 15 FAILED [1]
+  sin' pi/2 20 FAILED [2]
+  sin' 1 1 FAILED [3]
+  sin' pi 15 FAILED [4]
+
+Failures:
+
+  ../la1d_test.hs:22: 
+  1) sin': sin' (pi/6) 15
+       predicate failed on: 0.4993494278142881
+
+  ../la1d_test.hs:25: 
+  2) sin': sin' pi/2 20
+       predicate failed on: 0.8499782954315933
+
+  ../la1d_test.hs:28: 
+  3) sin': sin' 1 1
+       expected: 1.0
+        but got: 0.825
+
+  ../la1d_test.hs:31: 
+  4) sin': sin' pi 15
+       predicate failed on: -3.894635915413647
+
+Randomized with seed 402387408
+
+Finished in 0.0184 seconds
+5 examples, 4 failures
+
+toAstro:
+  toAstro 1 1 FAILED [1]
+  toAstro 40 40
+  toAstro 10 30
+  toAstro 3 6 FAILED [2]
+
+Failures:
+
+  ../la1e_test.hs:18: 
+  1) toAstro: toAstro 1 1
+       uncaught exception: ErrorCall (Invalid Date
+       CallStack (from HasCallStack):
+         error, called at ./LA1.hs:62:16 in main:LA1)
+
+  ../la1e_test.hs:28: 
+  2) toAstro: toAstro 3 6
+       expected: "Pisces"
+        but got: "Pices"
+
+Randomized with seed 793804262
+
+Finished in 0.0025 seconds
+4 examples, 2 failures
+
+
+-----------WARNING AND ERROR OUTPUTS BELOW-----------
+
+
+../la1a_test.hs:28:7: error:
+    • No instance for (Integral Char)
+        arising from a use of ‘removeElems’
+    • In the first argument of ‘shouldBe’, namely
+        ‘removeElems 'c' ['c', 'h', 'e', 'c', ....]’
+      In the second argument of ‘($)’, namely
+        ‘removeElems 'c' ['c', 'h', 'e', 'c', ....] `shouldBe` "hek"’
+      In a stmt of a 'do' block:
+        it "removeElems 'c' ['c', 'h', 'e', 'c', 'k']"
+        $ removeElems 'c' ['c', 'h', 'e', 'c', ....] `shouldBe` "hek"
+
+../la1b_test.hs:31:7: error:
+    • No instance for (Integral Char)
+        arising from a use of ‘longerThan’
+    • In the first argument of ‘shouldBe’, namely
+        ‘longerThan 2 ["yeah", "yes", "no"]’
+      In the second argument of ‘($)’, namely
+        ‘longerThan 2 ["yeah", "yes", "no"] `shouldBe` ["yeah", "yes"]’
+      In a stmt of a 'do' block:
+        it
+          "longerThan 2 [['y', 'e', 'a', 'h'], ['y', 'e', 's'], ['n', 'o']]"
+        $ longerThan 2 ["yeah", "yes", "no"] `shouldBe` ["yeah", "yes"]
+
+../la1c_test.hs:25:7: error:
+    • No instance for (Integral Char) arising from a use of ‘printBar’
+    • In the first argument of ‘shouldBe’, namely ‘printBar "****"’
+      In the second argument of ‘($)’, namely
+        ‘printBar "****" `shouldBe` "****"’
+      In a stmt of a 'do' block:
+        it "printBar \"****\"" $ printBar "****" `shouldBe` "****"
+
+../la1c_test.hs:28:7: error:
+    • No instance for (Integral (t0, t1, t2))
+        arising from a use of ‘printBar’
+    • In the first argument of ‘shouldBe’, namely
+        ‘printBar [(1, 2, 5), (3, 6, 1), (0, 0, 0)]’
+      In the second argument of ‘($)’, namely
+        ‘printBar [(1, 2, 5), (3, 6, 1), (0, 0, 0)] `shouldBe` "***"’
+      In a stmt of a 'do' block:
+        it "printBar [(1,2,5), (3,6,1), (0,0,0)]"
+        $ printBar [(1, 2, 5), (3, 6, 1), (0, 0, 0)] `shouldBe` "***"
+
+../la1c_test.hs:28:18: error:
+    • Ambiguous type variable ‘t0’ arising from the literal ‘1’
+      prevents the constraint ‘(Num t0)’ from being solved.
+      Probable fix: use a type annotation to specify what ‘t0’ should be.
+      These potential instances exist:
+        instance Num Integer -- Defined in ‘GHC.Num’
+        instance Num Double -- Defined in ‘GHC.Float’
+        instance Num Float -- Defined in ‘GHC.Float’
+        ...plus two others
+        ...plus six instances involving out-of-scope types
+        (use -fprint-potential-instances to see them all)
+    • In the expression: 1
+      In the expression: (1, 2, 5)
+      In the first argument of ‘printBar’, namely
+        ‘[(1, 2, 5), (3, 6, 1), (0, 0, 0)]’
+
+../la1c_test.hs:28:20: error:
+    • Ambiguous type variable ‘t1’ arising from the literal ‘2’
+      prevents the constraint ‘(Num t1)’ from being solved.
+      Probable fix: use a type annotation to specify what ‘t1’ should be.
+      These potential instances exist:
+        instance Num Integer -- Defined in ‘GHC.Num’
+        instance Num Double -- Defined in ‘GHC.Float’
+        instance Num Float -- Defined in ‘GHC.Float’
+        ...plus two others
+        ...plus six instances involving out-of-scope types
+        (use -fprint-potential-instances to see them all)
+    • In the expression: 2
+      In the expression: (1, 2, 5)
+      In the first argument of ‘printBar’, namely
+        ‘[(1, 2, 5), (3, 6, 1), (0, 0, 0)]’
+
+../la1c_test.hs:28:22: error:
+    • Ambiguous type variable ‘t2’ arising from the literal ‘5’
+      prevents the constraint ‘(Num t2)’ from being solved.
+      Probable fix: use a type annotation to specify what ‘t2’ should be.
+      These potential instances exist:
+        instance Num Integer -- Defined in ‘GHC.Num’
+        instance Num Double -- Defined in ‘GHC.Float’
+        instance Num Float -- Defined in ‘GHC.Float’
+        ...plus two others
+        ...plus six instances involving out-of-scope types
+        (use -fprint-potential-instances to see them all)
+    • In the expression: 5
+      In the expression: (1, 2, 5)
+      In the first argument of ‘printBar’, namely
+        ‘[(1, 2, 5), (3, 6, 1), (0, 0, 0)]’
+
+../la1d_test.hs:2:1: warning: [-Wtabs]
+    Tab character found here.
+    Please use spaces instead.
+
+../la1e_test.hs:2:1: warning: [-Wtabs]
+    Tab character found here.
+    Please use spaces instead.

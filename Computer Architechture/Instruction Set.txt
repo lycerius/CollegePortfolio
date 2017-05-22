@@ -1,0 +1,53 @@
+-Two components
+	-OpCode (What you're doing, such as adding or loading)
+	-Operand (Parameters)
+		-Registers
+		-Data
+================
+-Format of an instruction set
+	-Instructions set represented by hex values from 0 to FFFF
+		-First digit of ASSEMBLY CODE is OpCode, but the bits of the Opcode is 4.
+		-Everything after the first digit is the operand or the parameters
+			-This includes registers, memory locations, data
+		
+= Instructions =
+Mov command requires a immediate value and one destination register.
+We need to have bus read on and reg write on.
+We need to have alu enable off and bus write off.
+
+We don't care about op1, op2, or op3 here until we reach the register. 
+The bus control only really needs to take care of clock, cycle and opcode to control fetch/execute in the CPU.
+
+==========================================================
+= OP  =   EXAMPLE    =         DESCRIPTION        = BINA =
+==========================================================
+= ADD = ADD RA,RB,RC = RA=RB+RC                   = 0ABC =
+==========================================================
+= SUB = SUB RA,RB,RC = RA=RB-RC                   = 1ABC =
+==========================================================
+= MUL = MUL RA,RB,RC = RA=RB*RC                   = 2ABC =
+==========================================================
+= DIV = DIV RA,RB,RC = RA=RB/RC                   = 3ABC =
+==========================================================
+= MOV = MOV RA,(8bit)= RA=(8bit)                  = 4AMM =
+==========================================================
+= CMP = CMP RA,RB    = CMP=(RA==RB) [RA-RB]       = 5AB0 =
+==========================================================
+= JMP = JMP (12bit)  = Goto the 12 bit address    = 6MMM =
+==========================================================
+= JE  = JE (12bit)   = Goto (12bit) if CMP==0     = 7MMM =
+==========================================================
+= JL  = JL (12bit)   = Goto (12bit) if CMP<0      = 8MMM =
+==========================================================
+= JG  = JG (12bit)   = Goto (12bit) if CMP>0      = 9MMM =
+==========================================================
+= JLE = JLE (12bit)  = Goto (12bit) if CMP<=0     = AMMM =
+==========================================================
+= JGE = JGE (12bit)  = Goto (12bit) if CMP>=0     = BMMM =
+==========================================================
+=STOR = STOR RA,RB   = RA = RAM[RB]               = CAB0 = (limit to 12bit address, extra bits ARE DROPPED)
+==========================================================
+=PUT  = PUT RA,RB    = RAM[RA] = RB               = DAB0 = (limit to 12bit address, extra bits ARE DROPPED)
+==========================================================
+We still have room for 2 instructions (E) (F)
+

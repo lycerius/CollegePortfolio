@@ -1,0 +1,42 @@
+Score: 85
+
+meet, conflict should be between two different entities
+
+-------PA3 tests on knowledge base 1-------
+
+john:schedule(john,wentw216,11)
+dobbs102:usage(dobbs102,10)
+3400:conflict(3400,3400)
+mary:meet(mary,mary)
+yes:schedule(mary,dobbs118,12)
+yes:usage(wentw118,12)
+no:conflict(3350,1000)
+yes:meet(jim,john)
+
+
+-------PA3 tests on knowledge base 2-------
+
+wentw204:schedule(hector,wentw204,11)
+dobbs201:usage(dobbs201,12)
+200:conflict(200,200)
+anna:meet(anna,hector)
+yes:schedule(cam,wentw306,9)
+yes:usage(wentw204,11)
+no:conflict(301,140)
+yes:meet(baxter,cam)
+
+
+-----------WARNING AND ERROR OUTPUTS BELOW-----------rg
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+PA3 kb1 tests timed out
+ERROR: /Users/user/Documents/COMP3071j/student_work/pa2/source/pa2_test2.pl:22: Initialization goal raised exception:
+ERROR: '<meta-call>'/1: Undefined procedure: schedule/3
+Welcome to SWI-Prolog (threaded, 64 bits, version 7.3.32)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+PA3 kb2 tests timed out

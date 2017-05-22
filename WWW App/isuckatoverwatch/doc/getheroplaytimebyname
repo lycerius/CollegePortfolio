@@ -1,0 +1,36 @@
+
+get https://api.lootbox.eu/{platform}/{region}/{tag}/{mode}/heroes
+where:
+  platform = "pc" | "console"
+  region   = "us"
+  tag      = "UserName#Tag" replace # with -
+  mode     = "competitive-play" | "quick-play"
+
+
+'https://api.lootbox.eu/pc/us/Crucible-11923/quick-play/heroes'
+
+[
+  {"name":"Reinhardt","playtime":"70 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000007.png","percentage":1},
+  {"name":"Roadhog","playtime":"37 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000040.png","percentage":0.5306600967063617},
+  {"name":"D.Va","playtime":"18 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E000000000007A.png","percentage":0.2628817253468363},
+  {"name":"McCree","playtime":"17 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000042.png","percentage":0.2505590160676024},
+  {"name":"Hanzo","playtime":"16 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000005.png","percentage":0.23038441186194547},
+  {"name":"L&#xFA;cio","playtime":"13 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000079.png","percentage":0.1943864726325701},
+  {"name":"Soldier: 76","playtime":"12 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E000000000006E.png","percentage":0.17597063864576418},
+  {"name":"Junkrat","playtime":"12 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000065.png","percentage":0.17433215231080595},
+  {"name":"Mercy","playtime":"9 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000004.png","percentage":0.12954038348520266},
+  {"name":"Mei","playtime":"7 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E00000000000DD.png","percentage":0.10979399384264292},
+  {"name":"Bastion","playtime":"7 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000015.png","percentage":0.10874752262775682},
+  {"name":"Reaper","playtime":"7 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000002.png","percentage":0.10848521132207789},
+  {"name":"Ana","playtime":"7 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E000000000013B.png","percentage":0.10030831604968554},
+  {"name":"Widowmaker","playtime":"5 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E000000000000A.png","percentage":0.08014566833465783},
+  {"name":"Genji","playtime":"3 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000029.png","percentage":0.0547087023164019},
+  {"name":"Torbj&#xF6;rn","playtime":"3 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000006.png","percentage":0.04905347958214796},
+  {"name":"Zenyatta","playtime":"3 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000020.png","percentage":0.04749398523853777},
+  {"name":"Pharah","playtime":"2 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000008.png","percentage":0.03818751098595963},
+  {"name":"Tracer","playtime":"2 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000003.png","percentage":0.03240746874738124},
+  {"name":"Winston","playtime":"2 hours","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000009.png","percentage":0.030655799018981467},
+  {"name":"Zarya","playtime":"1 hour","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000068.png","percentage":0.022815632296075732},
+  {"name":"Symmetra","playtime":"37 minutes","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/0x02E0000000000016.png","percentage":0.008927292810865302},
+  {"name":"overwatch.guid.undefined","playtime":"--","image":"https://blzgdapipro-a.akamaihd.net/game/heroes/small/undefined.png","percentage":0}
+]

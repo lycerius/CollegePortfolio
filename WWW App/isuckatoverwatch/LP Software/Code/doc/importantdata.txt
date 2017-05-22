@@ -1,0 +1,38 @@
+SoloKills
+ObjectiveKills
+DamageDone
+Eliminations
+Multikills
+HealingDone
+Deaths
+"GamesWon": "1,055",
+
+Eliminations-MostinGame
+FinalBlows-MostinGame
+DamageDone-MostinGame
+HealingDone-MostinGame
+DefensiveAssists-MostinGame
+OffensiveAssists-MostinGame
+ObjectiveKills-MostinGame
+ObjectiveTime-MostinGame
+SoloKills-MostinGame
+Multikill-Best
+TimeSpentonFire-MostinGame
+
+
+  "MeleeFinalBlows-Average": "0.15",
+  "TimeSpentonFire-Average": "00:58",
+  "SoloKills-Average": "1.73",
+  "ObjectiveTime-Average": "00:44",
+  "ObjectiveKills-Average": "4.71",
+  "HealingDone-Average": "1,171",
+  "FinalBlows-Average": "6.73",
+  "Deaths-Average": "6.65",
+  "DamageDone-Average": "5,186",
+  "Eliminations-Average": "12.42",
+
+"Cards": "707",
+  "Medals": "5,783",
+  "Medals-Gold": "2,027",
+  "Medals-Silver": "2,023",
+  "Medals-Bronze": "1,733",

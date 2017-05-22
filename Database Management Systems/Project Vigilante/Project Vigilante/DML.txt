@@ -1,0 +1,51 @@
+insert into users(email,name,salt,pwh) values("pnc@lol.com","Nathan Purpura",1346993711,"srDprXldfFRMmkNa0ScfE/61RCMywB4FHwwYFQMcJFM=");
+insert into users(email,name,salt,pwh) values("test1@test.com","Test Testerson", 907418215, "flzh59wguznKaX4vPpuMoXBWRYT0ELePzEvRTRO1kKk=");
+insert into users(email,name,salt,pwh) values("test2@test.com","Test Testerson", -485777132, "gRNU0RkA9kXRGAf4HL+2Nsqat8blpLNyd8lArzAno5s=");
+insert into users(email,name,salt,pwh) values("test3@gmail.com","Testerson Test" , -24996627, "EbW8QBRIcVf75EOitBrplC0qGL/hl54vDkamUsS/IbU=");
+insert into users(email,name,salt,pwh) values("test4@gmail.com","Testerson Test T", -1104064718, "Y+L/kwD2NUtJx70lc6XGlPGkBgeavIBxaALbGfmJEiY=");
+
+--Password:
+--pnc@lol.com = Hello World 1
+--test1@test.com = Hello World 2
+--test2@test.com = Hello World 3
+--test3@test.com = Hello World 4
+--test4@test.com = Hello World 5
+
+INSERT INTO `location`(`x`, `y`, `Street_Name`, `BuildingNumber`, `ZipCode`) VALUES (6,7,"Helo Street", "23", "01855");
+INSERT INTO `location`(`x`, `y`, `Street_Name`, `BuildingNumber`, `ZipCode`) VALUES (8,9,"2nd street", "56", "01853");
+INSERT INTO `location`(`x`, `y`, `Street_Name`, `BuildingNumber`, `ZipCode`) VALUES (6,7,"Helo Street", "23", "01855");
+INSERT INTO `location`(`x`, `y`, `Street_Name`, `BuildingNumber`, `ZipCode`) VALUES (4,5,"Bad Street", "8", "01854");
+INSERT INTO `location`(`x`, `y`, `Street_Name`, `BuildingNumber`, `ZipCode`) VALUES (2,1,"Cool Street", "0", "01854");
+
+
+INSERT INTO `suspect`(`Race`, `Gender`, `LAST_SEEN`, `Height`, Name) VALUES ("White", "Male", "10/10/2010", 120, "Bad Person 1");
+INSERT INTO `suspect`(`Race`, `Gender`, `LAST_SEEN`, `Height` , Name) VALUES ("White", "Female", "10/11/2010", 105, "Bad Person 2");
+INSERT INTO `suspect`(`Race`, `Gender`, `LAST_SEEN`, `Height`, Name) VALUES ("Black", "Male", "10/09/2010", 143, "Bad Person 3");
+
+INSERT INTO `crime`(`Description`, `Type`) VALUES ("Person stole my car", "CAR_THEFT");
+INSERT INTO `crime`(`Description`, `Type`) VALUES ("Someone is playing GTAV with my real car", "CAR_THEFT");
+
+INSERT INTO `commit`(`Crime_ID`, `Suspect_ID`) VALUES (1,2);
+INSERT INTO `commit`(`Crime_ID`, `Suspect_ID`) VALUES (1,3);
+INSERT INTO `commit`(`Crime_ID`, `Suspect_ID`) VALUES (2,1);
+
+INSERT INTO `accessories`(`suspect_id`, `items`) VALUES (1,"Hat");
+INSERT INTO `accessories`(`suspect_id`, `items`) VALUES (2,"Earings");
+INSERT INTO `accessories`(`suspect_id`, `items`) VALUES (3,"Nose Piercing");
+
+
+INSERT INTO privilege(Type, Description) VALUES ( "Guest", "Cannot do anything on database unless registered");
+INSERT INTO privilege(Type, Description) VALUES ( "Admin", "Can do anything on database");
+INSERT INTO privilege(Type, Description) VALUES ( "User", "Can do user things on database");
+
+INSERT INTO `userspriv` (`PrivID`, `UserID`) VALUES ('2', '1'), ('3', '2'), ('3', '3'), ('3', '4'), ('3', '5');
+
+INSERT INTO `report` (`Description`, `Time`, `crime_id`, `location_id`, `user_id`) VALUES ( 'Assault & Battery Charges, Car Theft', '1', '1', '2', '1'), ( 'Assault & Battery', '2', '2', '1', '1'), ( '1st Degree Murder, and Robbery', '3', '1', '4', '3');
+INSERT INTO police_department (`Name`, `location_id`, `User_id`) VALUES ( "Stationary Police Department", 1, 4), ( "Police Department Headquarters", 2, 1);
+INSERT INTO `police_department` (`Name`, `location_id`, `User_id`) VALUES ( "Stationary Police Department", 3, 3), ( "Police Box", 4, 2);
+INSERT INTO `police_department` (`Name`, `location_id`, `User_id`) VALUES ( "Stationary Police Department", 5, 3);
+
+INSERT INTO `weapon` (`suspect_id`, `Weapon`) VALUES ('1', 'Pistol Gun'), ('2', 'Pocket Knife and Baton');
+INSERT INTO `weapon` (`suspect_id`, `Weapon`) VALUES ('3', 'No weapon');
+
+INSERT INTO `car_theft` (`ID`, `Description`, `Type`, `Model`, `Brand`, `Picture`, `License`) VALUES ('1', 'Blue Car', 'Toyota', 'Carolla', 'SE', NULL, 'AAA-BB-CCC'), ('2', 'Black Minivan', 'Chevy', 'Venture', 'LE', NULL, 'CCC-DD-EEE')

@@ -1,0 +1,57 @@
+//Reports for a street, useful for getting heatmaps for certain streets
+//Works
+Complexity = 6
+
+select location.Street_Name as Street, count(report.crime_id) as Reports 
+from report join location on location.ID = report.location_id 
+group by location.Street_Name 
+order by Street ASC;
+
+//Reports for a user, useful for fraud testing or find users who are especially active.
+//Works
+Complexity = 6 
+
+select concat(users.ID,concat(':',users.Name)) as User, count(report.user_id) 
+from report join users on users.ID = report.user_id 
+group by report.user_id 
+order by users.Name ASC
+
+//Reports the necessary suspect information to the police
+//Works
+Complexity = 6
+
+select s.ID as ID, w.weapon as Weapon, a.items as Items, cr.type as CrimeType, cr.description as Description 
+from suspect s 
+left join weapon w on w.suspect_id=s.id 
+left outer join commit c on c.suspect_id=s.id 
+left outer join crime cr on cr.id=c.crime_id 
+join accessories a on a.suspect_id=s.id
+order by c.suspect_id ASC, cr.type ASC;
+
+//Get the privilages for a user, useful for doing just that and determining access rights
+//Works
+Complexity = 6
+
+select privilege.Type 
+from privilege 
+where privilege.ID in 
+	(select userspriv.PrivID 
+	from userspriv, users where users.ID=userspriv.UserID and users.ID = ?) 
+order by privilege.Type ASC
+
+--Gets the location where a car was stolen from
+SELECT car_theft.License as License ,Car_Theft.Model as Model, Car_Theft.Brand as Brand, location.Street_Name as "Street Name", location.BuildingNumber as "Building#", location.ZipCode as Zip
+FROM car_theft JOIN crime 
+ON car_theft.ID = crime.ID 
+JOIN report
+ON report.RID = crime.ID
+JOIN location
+ON location.ID = report.RID
+ORDER BY Car_Theft.Type
+
+--Gets the salt value for a particular user
+--Note: this would NEVER be executed by a remote client, this query would be located on a query processor hub
+SELECT users.salt from users where user.id = ?
+
+--Register the user with the given username and salt
+insert into users values(null, ?, ?, ?, ?, ?);

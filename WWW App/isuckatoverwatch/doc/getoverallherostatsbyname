@@ -1,0 +1,61 @@
+
+get https://api.lootbox.eu/{platform}/{region}/{tag}/{mode}/allHeroes/
+where:
+  platform = "pc" | "console"
+  region   = "us"
+  tag      = "UserName#Tag" replace # with -
+  mode     = "competitive-play" | "quick-play"
+
+#Example call for get https://api.lootbox.eu/pc/us/Crucible-11923/quick-play/allHeroes/
+{
+  "MeleeFinalBlows": "318",
+  "SoloKills": "3,551",
+  "ObjectiveKills": "9,652",
+  "FinalBlows": "13,791",
+  "DamageDone": "10,625,856",
+  "Eliminations": "25,449",
+  "EnvironmentalKills": "121",
+  "Multikills": "185",
+  "HealingDone": "2,400,173",
+  "ReconAssists": "18",
+  "TeleporterPadsDestroyed": "12",
+  "Eliminations-MostinGame": "49",
+  "FinalBlows-MostinGame": "32",
+  "DamageDone-MostinGame": "19,076",
+  "HealingDone-MostinGame": "13,307",
+  "DefensiveAssists-MostinGame": "25",
+  "OffensiveAssists-MostinGame": "20",
+  "ObjectiveKills-MostinGame": "31",
+  "ObjectiveTime-MostinGame": "03:33",
+  "Multikill-Best": "5",
+  "SoloKills-MostinGame": "32",
+  "TimeSpentonFire-MostinGame": "10:28",
+  "MeleeFinalBlows-Average": "0.15",
+  "TimeSpentonFire-Average": "00:58",
+  "SoloKills-Average": "1.73",
+  "ObjectiveTime-Average": "00:44",
+  "ObjectiveKills-Average": "4.71",
+  "HealingDone-Average": "1,171",
+  "FinalBlows-Average": "6.73",
+  "Deaths-Average": "6.65",
+  "DamageDone-Average": "5,186",
+  "Eliminations-Average": "12.42",
+  "Deaths": "13,636",
+  "EnvironmentalDeaths": "291",
+  "Cards": "707",
+  "Medals": "5,783",
+  "Medals-Gold": "2,027",
+  "Medals-Silver": "2,023",
+  "Medals-Bronze": "1,733",
+  "GamesWon": "1,055",
+  "TimeSpentonFire": "33:09:21",
+  "ObjectiveTime": "25:29:21",
+  "TimePlayed": "263hours",
+  "MeleeFinalBlows-MostinGame": "6",
+  "DefensiveAssists": "1,683",
+  "DefensiveAssists-Average": "1",
+  "OffensiveAssists": "581",
+  "OffensiveAssists-Average": "0",
+  "ReconAssists-Average": "0",
+  "ReconAssist-MostinGame": "1"
+}

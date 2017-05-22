@@ -1,0 +1,29 @@
+Score: 100
+
+the function's name was add_and_triple!
+
+add_and_triple
+  add_and_triple 4 8
+  add_and_triple (-1) 2
+  add_and_triple 4.0 8.6
+  add_and_triple 0 0
+  add_and_triple (-4.25) (-6.25)
++* operator
+  4 +* 8
+  (-1) +* 2
+  4.0 +* 8.6
+  0 +* 0
+  (-4.25) +* (-6.25)
+triangular_numbers x
+  triangular_numbers 0
+  triangular_numbers 1
+  triangular_numbers 10
+  triangular_numbers 100
+  triangular_numbers (-1)
+
+Finished in 0.0023 seconds
+15 examples, 0 failures
+
+../../la0_test.hs:2:1: warning: [-Wtabs]
+    Tab character found here.
+    Please use spaces instead.

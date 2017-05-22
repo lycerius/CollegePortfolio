@@ -1,0 +1,19 @@
+Score: 100
+
+
+-------LA3a tests-------
+
+18 facts declared
+4 rules declared
+1 conjunctions declared
+
+
+-------LA3b tests-------
+
+yes:connected(hamburg,berlin)
+yes:connected(hamburg,bremen)
+yes:connected(fulda,berlin)
+yes:connected(munich,stuttgart)
+
+
+-----------WARNING AND ERROR OUTPUTS BELOW-----------

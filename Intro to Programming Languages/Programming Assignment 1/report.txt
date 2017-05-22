@@ -1,0 +1,115 @@
+Score: 91
+
+heap2InList isn't working
+
+insert:
+  insert ("Tam",50,30.55) Tip
+  insert ("Ula",30,2000.0) (HeapNode ("Tam",50,30.55) Tip Tip)
+  testIns pl h0
+  insert p2 h1
+  insert p2 h2
+  testIns pl h2
+
+Finished in 0.0012 seconds
+6 examples, 0 failures
+
+delete:
+  delete h1
+  delete h2
+  testDel 5 h2
+  testDel 4 h1
+
+Finished in 0.0007 seconds
+4 examples, 0 failures
+
+peek:
+  getPriority (peek h0)
+  peek h1
+  peek h2
+
+Finished in 0.0005 seconds
+3 examples, 0 failures
+
+heap2InList:
+  heap2InList h0
+  heap2InList h1 FAILED [1]
+  heap2InList h2 FAILED [2]
+
+Failures:
+
+  ../pa1d_test.hs:25: 
+  1) heap2InList: heap2InList h1
+       expected: [("Jess",40,0.0),("Eria",10,199.95),("Dan",60,1000.0),("Sami",55,46.78)]
+        but got: [("Eria",10,199.95),("Jess",40,0.0),("Sami",55,46.78),("Dan",60,1000.0)]
+
+  ../pa1d_test.hs:28: 
+  2) heap2InList: heap2InList h2
+       expected: [("Camille",5,40.0),("Bette",18,45.0),("Don",6,45.0),("Al",20,50.0),("Finn",5,99.99),("Ephram",10,60.0)]
+        but got: [("Camille",5,40.0),("Don",6,45.0),("Bette",18,45.0),("Finn",5,99.99),("Ephram",10,60.0),("Al",20,50.0)]
+
+Randomized with seed 1265278492
+
+Finished in 0.0039 seconds
+3 examples, 2 failures
+
+heap2PreList:
+  heap2PreList h0
+  heap2PreList h1
+  heap2PreList h2
+
+Finished in 0.0006 seconds
+3 examples, 0 failures
+
+heap2Names:
+  heap2Names h0
+  heap2Names h1
+  heap2Names h2
+
+Finished in 0.0005 seconds
+3 examples, 0 failures
+
+isEmpty:
+  isEmpty h0
+  isEmpty h1
+  isEmpty h2
+
+Finished in 0.0005 seconds
+3 examples, 0 failures
+
+height:
+  height h0
+  height h1
+  height h2 FAILED [1]
+
+Failures:
+
+  ../pa1h_test.hs:28: 
+  1) height: height h2
+       expected: 3
+        but got: 4
+
+Randomized with seed 1701672631
+
+Finished in 0.0014 seconds
+3 examples, 1 failure
+
+size:
+  size h0
+  size h1
+  size h2
+
+Finished in 0.0005 seconds
+3 examples, 0 failures
+
+heapMap:
+  heapMap (\x -> 3 * x + 2) h0
+  heapMap (\x -> 3 * x + 2) h1
+  heapMap (\x -> 3 * x + 2) h2
+  heapMap (\x -> (10 * fromIntegral (round (x/10.0))) - 0.01) h2
+
+Finished in 0.0011 seconds
+4 examples, 0 failures
+
+
+-----------WARNING AND ERROR OUTPUTS BELOW-----------
+
