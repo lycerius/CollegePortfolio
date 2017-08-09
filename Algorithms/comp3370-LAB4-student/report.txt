@@ -1,0 +1,16 @@
+Score: 100
+
+== junit ==
+edu.wit.cs.comp3370.grading.LAB4Grading#testHeightSmall: +10
+edu.wit.cs.comp3370.grading.LAB4Grading#testPrevLarge: +5
+edu.wit.cs.comp3370.grading.LAB4Grading#testPrevSmall: +10
+edu.wit.cs.comp3370.grading.LAB4Grading#testInsertRand: +15
+edu.wit.cs.comp3370.grading.LAB4Grading#testInsertSeq: +10
+edu.wit.cs.comp3370.grading.LAB4Grading#testInsertMedium: +10
+edu.wit.cs.comp3370.grading.LAB4Grading#testNextLarge: +5
+edu.wit.cs.comp3370.grading.LAB4Grading#testNextSmall: +10
+edu.wit.cs.comp3370.grading.LAB4Grading#testFind: +15
+edu.wit.cs.comp3370.grading.LAB4Grading#testSize: +10
+
+== ontime ==
+ontime: +0

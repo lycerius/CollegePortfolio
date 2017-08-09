@@ -1,0 +1,17 @@
+Score: 95
+
+fails on empty item list
+
+== junit ==
+edu.wit.cs.comp3370.grading.LAB8Grading#testTiny: +15
+edu.wit.cs.comp3370.grading.LAB8Grading#testSmall: +10
+edu.wit.cs.comp3370.grading.LAB8Grading#testLarge: +10
+edu.wit.cs.comp3370.grading.LAB8Grading#testTinyBest: +20
+edu.wit.cs.comp3370.grading.LAB8Grading#testSmallBest: +15
+edu.wit.cs.comp3370.grading.LAB8Grading#testLargeBest: +15
+edu.wit.cs.comp3370.grading.LAB8Grading#testNotEnoughRoom: +5
+edu.wit.cs.comp3370.grading.LAB8Grading#testZeroWeight: +5
+edu.wit.cs.comp3370.grading.LAB8Grading#testZeroItems: +0
+
+== ontime ==
+ontime: +0

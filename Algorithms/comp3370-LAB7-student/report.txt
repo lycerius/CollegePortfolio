@@ -1,0 +1,11 @@
+Score: 100
+
+== junit ==
+edu.wit.cs.comp3370.grading.LAB7Grading#testSmall1: +35
+edu.wit.cs.comp3370.grading.LAB7Grading#testSmall2: +30
+edu.wit.cs.comp3370.grading.LAB7Grading#testLarge1: +20
+edu.wit.cs.comp3370.grading.LAB7Grading#testLarge2: +10
+edu.wit.cs.comp3370.grading.LAB7Grading#testEmpty: +5
+
+== ontime ==
+ontime: +0

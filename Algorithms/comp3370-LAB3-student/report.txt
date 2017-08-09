@@ -1,0 +1,12 @@
+Score: 100
+
+== junit ==
+edu.wit.cs.comp3370.grading.LAB3Grading#testSimpleStDevGood: +5
+edu.wit.cs.comp3370.grading.LAB3Grading#testSimpleStDevOk: +10
+edu.wit.cs.comp3370.grading.LAB3Grading#testSimple: +35
+edu.wit.cs.comp3370.grading.LAB3Grading#testRand: +35
+edu.wit.cs.comp3370.grading.LAB3Grading#testRandStDevGood: +5
+edu.wit.cs.comp3370.grading.LAB3Grading#testRandStDevOk: +10
+
+== ontime ==
+ontime: +0
